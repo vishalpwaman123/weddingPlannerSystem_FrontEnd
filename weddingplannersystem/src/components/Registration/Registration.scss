@@ -1,0 +1,141 @@
+.mainContainer {
+  background-color: #fff;
+  //   border: 1px solid #c3c4c7;
+  //   margin: 1% auto;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bodyContainer {
+  padding: 18px 20px;
+  display: flex;
+  height: 82%;
+  width: 55%;
+  border: 1px solid #c3c4c7;
+  /*	flex-grow: 1;*/
+  /*	box-sizing: border-box;*/
+  /*overflow: hidden;*/
+}
+
+.registrationContainer {
+  flex-basis: 450px;
+  /*margin: 0 -48px;*/
+  padding: 0 25px;
+}
+
+.fundoofont {
+  display: flex;
+  font-size: 25px;
+  font-weight: 500;
+  /*justify-content: flex-start;*/
+}
+
+.f {
+  color: #4285f4;
+}
+
+.u {
+  color: #db4437;
+}
+
+.n {
+  color: #f4b400;
+}
+
+.d {
+  color: #4285f4;
+}
+
+.o {
+  color: #0f9d58;
+}
+
+.o1 {
+  color: #db4437;
+}
+
+.p1 {
+  margin: 15px 0 15px 0;
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  justify-content: flex-start;
+  line-height: 80%;
+}
+
+.text1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.textRow1 {
+  font-size: 14px;
+}
+
+.textRow2 {
+  font-size: 14px;
+  margin-left: 25px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.textColumn2 {
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+.text3 {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  justify-content: space-between;
+
+  .button1 {
+    .btn {
+      padding: 0px;
+    }
+  }
+}
+
+.textColumn2 {
+  width: 100%;
+}
+
+.passwordHint {
+  font-size: 14px;
+  padding-left: 10px;
+  opacity: 0.8;
+}
+
+.error {
+  color: red;
+  margin: 0px;
+}
+
+@media screen and (max-width: 755px) {
+  .mainContainer {
+    width: 50%;
+  }
+}
+
+.radiobutton {
+  display: flex;
+  flex-direction: row;
+  .MuiFormGroup-root {
+    flex-direction: row;
+  }
+}

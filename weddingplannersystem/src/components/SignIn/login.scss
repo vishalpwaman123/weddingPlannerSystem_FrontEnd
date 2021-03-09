@@ -1,0 +1,86 @@
+.loginMainContainer {
+  background-color: #fff;
+  border: 1px solid #dadce0;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginContainer {
+  padding: 0px 30px 30px 30px;
+  display: flex;
+  //   flex-grow: 1;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  width: 33%;
+  border: 1px solid #dadce0;
+  height: 90%;
+  border-radius: 5px;
+
+  .p {
+    margin-bottom: 5px;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+
+  padding-top: 20px;
+}
+
+.loginfundoofont {
+  align-items: center;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.logintitle {
+  padding-top: 5px 5px 5px 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.loginSubTitle {
+  padding-top: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.CreateAccount {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.error {
+  color: red;
+}
+
+.Lbutton1 {
+  margin-right: 140px;
+}
+
+.Forgetpassword {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.textField1 {
+  padding: 0px 0 0px 0;
+  margin: 0px 0 5px 0;
+}
+
+.errorMessage {
+  font-size: 12px;
+}
+
+.FT {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
