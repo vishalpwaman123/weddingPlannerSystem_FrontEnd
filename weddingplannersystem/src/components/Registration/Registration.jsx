@@ -4,12 +4,8 @@ import logo from "../../Asserts/logoRegister.svg";
 import "./Registration.scss";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Alert from "@material-ui/lab/Alert";
-import AlertTitle from "@material-ui/lab/AlertTitle";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
 import Radio from "@material-ui/core/Radio";
 // import userService from '../../Services/userServices';
 
@@ -172,31 +168,46 @@ export default class Registration extends React.Component {
       <div className="mainContainer">
         <div className="bodyContainer">
           <div className="registrationContainer">
-            <div className="fundoofont FT">
-              <span class="">W</span>
+            <div className="fundoofont Font-style">
+              <span class="">L</span>
+              <span class="">I</span>
+              <span class="">F</span>
               <span class="">E</span>
-              <span class="">D</span>
-              <span class="">D</span>
+              &nbsp;
               <span class="">I</span>
               <span class="">N</span>
-              <span class="">G</span>
-              &nbsp;
-              <span class="">E</span>
-              <span class="">V</span>
-              <span class="">E</span>
+              <span class="">S</span>
+              <span class="">U</span>
+              <span class="">R</span>
+              <span class="">A</span>
               <span class="">N</span>
+              <span class="">C</span>
+              <span class="">E</span>
+              &nbsp;
+              <span class="">C</span>
+              <span class="">O</span>
+              <span class="">R</span>
+              <span class="">P</span>
+              <span class="">O</span>
+              <span class="">R</span>
+              <span class="">A</span>
               <span class="">T</span>
+              <span class="">I</span>
+              <span class="">O</span>
+              <span class="">N</span>
             </div>
-            <form onSubmit={this.handleSubmit}>
-              <div className="textFieldBody">
-                <p className="p1">Create your Account</p> <br />
+            <form className="textFieldBody" onSubmit={this.handleSubmit}>
+              <div className="p1">Create your Account</div>
+              <div className="All-Input">
                 <div className="text">
-                  <div className="textColumn2">
+                  <div className="textColumn1">
                     <TextField
+                      autoComplete="off"
                       fullWidth
                       type="email"
                       name="email"
                       label="Username"
+                      InputLabelProps={{ style: { fontSize: 15 } }}
                       id="outlined-size-small"
                       variant="outlined"
                       size="small"
@@ -213,10 +224,11 @@ export default class Registration extends React.Component {
                       )}
                     </div>
                   </div>
-                  <div className="text3">
+                  <div className="textColumn2">
                     <div className="textRow1">
                       <TextField
                         label="Password"
+                        InputLabelProps={{ style: { fontSize: 15 } }}
                         name="password"
                         type="password"
                         id="outlined-size-small"
@@ -237,6 +249,7 @@ export default class Registration extends React.Component {
                     <div className="textRow2">
                       <TextField
                         label="Confirm Password"
+                        InputLabelProps={{ style: { fontSize: 15 } }}
                         type="password"
                         name="confirmPassword"
                         id="outlined-size-small"
@@ -259,37 +272,36 @@ export default class Registration extends React.Component {
                     Use 8 or more characters with a mix of letters, numbers &
                     symbols
                   </p>
-                  <div className="radiobutton">
-                    <RadioGroup
-                      aria-label="gender"
-                      className="radiobutton1"
-                      value={this.state.accountType}
-                      onChange={this.accountTypeHandle}
-                    >
-                      <FormControlLabel
-                        value="Admin"
-                        control={<Radio />}
-                        label="Admin"
-                      />
-                      <FormControlLabel
-                        value="User"
-                        control={<Radio />}
-                        label="User"
-                      />
-                    </RadioGroup>
+                </div>
+                <div className="radiobutton">
+                  <RadioGroup
+                    aria-label="gender"
+                    className="radiobutton1"
+                    value={this.state.accountType}
+                    onChange={this.accountTypeHandle}
+                  >
+                    <FormControlLabel
+                      value="Admin"
+                      control={<Radio />}
+                      label="Admin"
+                    />
+                    <FormControlLabel
+                      value="User"
+                      control={<Radio />}
+                      label="User"
+                    />
+                  </RadioGroup>
+                </div>
+                <div className="button">
+                  <div className="button1">
+                    <Button variant="link" href="/login">
+                      Sign in instead
+                    </Button>
                   </div>
-                  <div className="button">
-                    <div className="button1">
-                      <Button variant="link" href="/login">
-                        Sign in instead
-                      </Button>
-                    </div>
-
-                    <div className="button2">
-                      <Button variant="primary" onClick={this.handleSubmit}>
-                        Register
-                      </Button>{" "}
-                    </div>
+                  <div className="button2">
+                    <Button variant="primary" onClick={this.handleSubmit}>
+                      Register
+                    </Button>
                   </div>
                 </div>
               </div>
