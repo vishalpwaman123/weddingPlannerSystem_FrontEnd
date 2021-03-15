@@ -29,6 +29,7 @@ export default class Registration extends React.Component {
     this.state = {
       email: null,
       password: null,
+      accountType: "User",
 
       errors: {
         email: "",
@@ -131,64 +132,57 @@ export default class Registration extends React.Component {
     return (
       <div className="loginMainContainer">
         <div className="loginContainer">
-          <div className="loginfundoofont" align="center">
-            <span className="FT">W</span>
-            <span class="FT">E</span>
-            <span class="FT">D</span>
-            <span class="FT">D</span>
-            <span class="FT">I</span>
-            <span class="FT">N</span>
-            <span class="FT">G</span>
-            &nbsp;
-            <span class="FT">E</span>
-            <span class="FT">V</span>
-            <span class="FT">E</span>
-            <span class="FT">N</span>
-            <span class="FT">T</span>
+          <div className="loginfundoofont FT" align="center">
+            LIFE INSURANCE CORPORATION
           </div>
           <p className="logintitle FT" align="center">
             Sign in
           </p>
           <p className="loginSubTitle FT" align="center">
-            Use your Google Account
+            Use your LIC Account
           </p>
-          <div className="textField1">
-            <TextField
-              fullWidth
-              type="email"
-              name="email"
-              label="Username"
-              id="outlined-size-small"
-              variant="outlined"
-              size="small"
-              helperText="Use EmailID or Mobile Number"
-              required
-              text-align="right"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-            <div className="error">
-              {errors.email.length > 0 && (
-                <span className="errorMessage">{errors.email}</span>
-              )}
+          <div class="Input-Field">
+            <div className="textField1">
+              <TextField
+                fullWidth
+                className="InputField"
+                type="email"
+                name="email"
+                label="Username"
+                id="outlined-size-small"
+                variant="outlined"
+                size="small"
+                helperText="Use EmailID or Mobile Number"
+                required
+                text-align="right"
+                value={this.state.email}
+                onChange={this.handleChange}
+              />
+              <div className="error">
+                {errors.email.length > 0 && (
+                  <span className="errorMessage">{errors.email}</span>
+                )}
+              </div>
             </div>
-          </div>
-          <div className="textField2">
-            <TextField
-              name="password"
-              label="Password"
-              id="outlined-size-small"
-              variant="outlined"
-              size="small"
-              helperText="Use 8 or more characters with a mix of letters, numbers & symbols"
-              required
-              value={this.state.password}
-              onChange={this.handleChange}
-            />
-            <div className="error">
-              {errors.password.length > 0 && (
-                <span className="errorMessage">{errors.password}</span>
-              )}
+            <div className="textField2">
+              <TextField
+                fullWidth
+                className="InputField"
+                name="password"
+                label="Password"
+                id="outlined-size-small"
+                variant="outlined"
+                size="small"
+                helperText="Use 8 or more characters with a mix of letters, numbers & symbols"
+                required
+                value={this.state.password}
+                onChange={this.handleChange}
+              />
+              <div className="error">
+                {errors.password.length > 0 && (
+                  <span className="errorMessage">{errors.password}</span>
+                )}
+              </div>
             </div>
           </div>
           <div className="radiobutton">
@@ -202,23 +196,29 @@ export default class Registration extends React.Component {
                 value="Admin"
                 control={<Radio />}
                 label="Admin"
+                className="admin-Radio-Button"
               />
-              <FormControlLabel value="User" control={<Radio />} label="User" />
+              <FormControlLabel
+                value="User"
+                control={<Radio />}
+                label="User"
+                className="user-Radio-Button"
+              />
             </RadioGroup>
           </div>
-
-          <div>
-            <div className="Lbutton3">
-              <Button color="primary" href="/forgetPassword">
-                <span class="Forgetpassword">Forget password?</span>
-              </Button>
-            </div>
+          <div className="Lbutton3">
+            <Button
+              color="primary"
+              href="/forgetPassword"
+              className="Forgetpassword"
+            >
+              Forget password?
+            </Button>
           </div>
-
           <div className="buttonContainer">
             <div className="Lbutton1">
-              <Button color="primary" href="/">
-                <span class="CreateAccount">Create account</span>
+              <Button color="primary" href="/" class="CreateAccount">
+                Create account
               </Button>
             </div>
 
@@ -227,14 +227,13 @@ export default class Registration extends React.Component {
                 variant="contained"
                 color="primary"
                 onClick={this.handleSubmit}
-                className="btn"
+                className="SignIn-btn"
               >
                 Sign in
               </Button>
             </div>
           </div>
-
-          <div className="AlertMessage">
+          {/* <div className="AlertMessage">
             <div className="successAlert">
               {flags.success.length > 0 && flags.failed == null && (
                 <Alert severity="success">
@@ -252,7 +251,7 @@ export default class Registration extends React.Component {
                 </Alert>
               )}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     );
